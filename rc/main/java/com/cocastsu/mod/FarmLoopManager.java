@@ -1,4 +1,4 @@
-package com.example.bonemeal;
+package com.cocastsu.mod;
 
 import net.minecraft.client.MinecraftClient;
 

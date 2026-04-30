@@ -15,10 +15,16 @@ public class FarmLoopManager {
     }
 
     public static void tick(MinecraftClient client) {
+
+        // ❗ Fix crash: đảm bảo không null
         if (client == null || client.player == null || client.world == null) return;
 
-        // 👉 logic farm của bạn viết ở đây
-        // ví dụ test:
+        // ====== LOGIC TEST (không crash) ======
+        // Bạn có thể thay bằng auto farm thật sau
+
+        // ví dụ đơn giản:
+        // mỗi tick nhảy nhẹ (test mod chạy)
         // client.player.jump();
+
     }
 }

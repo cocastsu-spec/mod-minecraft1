@@ -1,0 +1,7 @@
+package com.example.bonemeal.core;
+
+public enum State {
+    IDLE, DROP_SEEDS, POSITIONING,
+    SHOP_STEP_1, SHOP_STEP_2, SHOP_STEP_3, SHOP_STEP_4, SHOP_STEP_5, SHOP_STEP_6, SHOP_STEP_7,
+    CRAFT, PRE_KHO_CHECK, KHO_WHEAT_CLICK, KHO_STEP_1, KHO_STEP_2
+}

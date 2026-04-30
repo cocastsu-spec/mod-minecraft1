@@ -22,16 +22,10 @@ public class BoneMealAutoMod implements ClientModInitializer {
                 "category.bonemeal"
         ));
 
-        // KHÔNG gọi init ở đây nữa (tránh crash sớm)
-        // FarmLoopManager.init();
-
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
 
-            // ❗ Chặn crash: chưa vào world
-            if (client.player == null || client.world == null) return;
-
-            // Init muộn (an toàn)
-            FarmLoopManager.safeInit(client);
+            // ❗ Fix crash: chưa vào world thì bỏ qua
+            if (client == null || client.player == null || client.world == null) return;
 
             while (keyBinding.wasPressed()) {
                 FarmLoopManager.toggle();
@@ -43,7 +37,7 @@ public class BoneMealAutoMod implements ClientModInitializer {
                 );
             }
 
-            // Nếu đang bật thì chạy loop
+            // chạy loop nếu đang bật
             if (FarmLoopManager.isActive()) {
                 FarmLoopManager.tick(client);
             }

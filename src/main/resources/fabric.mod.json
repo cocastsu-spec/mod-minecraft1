@@ -5,12 +5,16 @@
   "name": "Bone Meal AutoFarm",
   "description": "Auto farm bone meal for server",
   "authors": ["Senior Dev"],
-  "contact": {},
   "license": "MIT",
-  "environment": "client",
+
+  "environment": "*",
+
   "entrypoints": {
-    "client": [ "com.example.bonemeal.BoneMealAutoMod" ]
+    "main": [
+      "com.example.bonemeal.BoneMealAutoMod"
+    ]
   },
+
   "depends": {
     "fabricloader": ">=0.15.11",
     "minecraft": "~1.21.1",

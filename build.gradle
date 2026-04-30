@@ -24,3 +24,7 @@ dependencies {
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 21
 }
+repositories {
+    maven { url = "https://maven.fabricmc.net/" }
+    mavenCentral()
+}

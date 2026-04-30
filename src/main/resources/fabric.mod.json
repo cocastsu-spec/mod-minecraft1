@@ -11,9 +11,9 @@
 
   "entrypoints": {
     "main": [
-      "com.example.bonemeal.BoneMealAutoMod"
+      "com.cocastsu.mod.BoneMealAutoMod"
     ]
-  },
+},
 
   "depends": {
     "fabricloader": ">=0.15.11",
